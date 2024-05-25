@@ -1,6 +1,7 @@
 package com.example.chatease
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,6 +26,13 @@ RecyclerView.Adapter<UserAdapter.UserViewHolder>()
         val currentUser = userList[position]
 
         holder.userName.text = currentUser.name
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context,ChatScreen::class.java)
+            intent.putExtra("name",currentUser.name)
+            intent.putExtra("uid",currentUser.uid)
+            context.startActivity(intent)
+        }
     }
 
     class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

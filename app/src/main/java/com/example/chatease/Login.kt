@@ -39,6 +39,13 @@ class Login : AppCompatActivity() {
         progressBar = findViewById(R.id.otp_page_progress_bar)
 
         mAuth = FirebaseAuth.getInstance()
+
+        val currentUser = mAuth.currentUser
+        if (currentUser!=null){
+            val intent = Intent(this@Login,MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
         progressBar.visibility = View.GONE
         btnLogin.setOnClickListener {
             val email = edtEmail.text.toString()
