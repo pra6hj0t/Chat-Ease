@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Email"
                 android:id="@+id/et_Email"
-                android:inputType="text"
+                android:inputType="textEmailAddress"
                 android:background="@drawable/edit_text_background"
                 android:textColor="@color/white"
                 />
@@ -114,6 +114,14 @@
             android:background="@drawable/button_background"
             android:layout_margin="20dp"
             android:textColor="@color/black"/>
+
+
+        <ProgressBar
+            android:layout_width="32dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/blue"
+            android:id="@+id/otp_page_progress_bar"/>
 
 
     </LinearLayout>
