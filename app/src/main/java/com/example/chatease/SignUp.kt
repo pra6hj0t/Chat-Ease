@@ -30,6 +30,7 @@ class SignUp : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_sign_up)
+        supportActionBar?.hide()
 
         btnLogin = findViewById(R.id.btn_login)
         edtName = findViewById(R.id.et_fullName)
@@ -92,7 +93,7 @@ class SignUp : AppCompatActivity() {
                     finish()
                 } else {
                     // If sign in fails, display a message to the user.
-                    Toast.makeText(this@SignUp,"Some Error Occurred", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@SignUp,"Not Valid", Toast.LENGTH_SHORT).show()
                     setInProgress(false)
 
                 }

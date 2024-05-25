@@ -29,6 +29,8 @@ class Login : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_login)
 
+        supportActionBar?.hide()
+
 
         btnJoin = findViewById(R.id.btn_join)
         edtEmail = findViewById(R.id.et_Email)
